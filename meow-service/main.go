@@ -14,10 +14,10 @@ import (
 )
 
 type Config struct {
-	PostgresDB       string `envconfig: "POSTGRES_DB"`
-	PostgresUser     string `envconfig: "POSTGRES_USER"`
-	PostgresPassword string `envconfig: "POSTGRES_PASSWORD"`
-	NatsAddress      string `envconfig: "NATS_ADDRESS"`
+	PostgresDB       string `envconfig:"POSTGRES_DB"`
+	PostgresUser     string `envconfig:"POSTGRES_USER"`
+	PostgresPassword string `envconfig:"POSTGRES_PASSWORD"`
+	NatsAddress      string `envconfig:"NATS_ADDRESS"`
 }
 
 func newRouter() (router *mux.Router) {
@@ -35,8 +35,8 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// Connect to db postgre
-	retry.ForeverSleep(2*time, Second, func(attempt int) error {
+	// Connect to PostgreSQL
+	retry.ForeverSleep(2*time.Second, func(attempt int) error {
 		addr := fmt.Sprintf("postgres://%s:%s@postgres/%s?sslmode=disable", cfg.PostgresUser, cfg.PostgresPassword, cfg.PostgresDB)
 		repo, err := db.NewPostgres(addr)
 		if err != nil {
@@ -48,16 +48,11 @@ func main() {
 	})
 	defer db.Close()
 
-	// Connect to nats (Messaging System for Cloud)
+	// Connect to Nats
 	retry.ForeverSleep(2*time.Second, func(_ int) error {
 		es, err := event.NewNats(fmt.Sprintf("nats://%s", cfg.NatsAddress))
 		if err != nil {
-			log.Println(err)
-			return err
-		}
-		err = es.OnMeowCreated(OnMeowCreated)
-		if err != nil {
-			log.Println(err)
+			log.Println("meowservice", err)
 			return err
 		}
 		event.SetEventStore(es)
@@ -70,5 +65,4 @@ func main() {
 	if err := http.ListenAndServe(":8080", router); err != nil {
 		log.Fatal(err)
 	}
-
 }

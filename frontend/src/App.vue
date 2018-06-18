@@ -12,7 +12,7 @@
 
 <script>
 import Timeline from './components/Timeline.vue';
-import Search from './components/Search';
+import Search from './components/Search.vue';
 
 
 export default {

@@ -14,7 +14,7 @@ type Repository interface {
 
 var impl Repository
 
-func setRepository(repository Repository) {
+func SetRepository(repository Repository) {
 	impl = repository
 }
 

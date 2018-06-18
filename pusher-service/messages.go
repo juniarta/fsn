@@ -9,7 +9,7 @@ const (
 )
 
 type MeowCreatedMessage struct {
-	Kind      uint64    `json:"kind"`
+	Kind      uint32    `json:"kind"`
 	ID        string    `json:"id"`
 	Body      string    `json:"body"`
 	CreatedAt time.Time `json:"created_at"`

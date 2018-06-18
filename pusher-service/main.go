@@ -12,7 +12,7 @@ import (
 )
 
 type Config struct {
-	NatsAddress string `envconfig: "NATS_ADDRESS"`
+	NatsAddress string `envconfig:"NATS_ADDRESS"`
 }
 
 func main() {
@@ -27,7 +27,7 @@ func main() {
 	retry.ForeverSleep(2*time.Second, func(_ int) error {
 		es, err := event.NewNats(fmt.Sprintf("nats://%s", cfg.NatsAddress))
 		if err != nil {
-			log.Println(err)
+			log.Println("error pushernya", err)
 			return err
 		}
 
@@ -46,7 +46,7 @@ func main() {
 	})
 	defer event.Close()
 
-	// Run websocket server
+	// Run WebSocket server
 	go hub.run()
 	http.HandleFunc("/pusher", hub.handleWebSocket)
 	err = http.ListenAndServe(":8080", nil)

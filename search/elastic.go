@@ -18,7 +18,6 @@ func NewElastic(url string) (*ElasticRepository, error) {
 		elastic.SetURL(url),
 		elastic.SetSniff(false),
 	)
-
 	if err != nil {
 		return nil, err
 	}
@@ -26,7 +25,6 @@ func NewElastic(url string) (*ElasticRepository, error) {
 }
 
 func (r *ElasticRepository) Close() {
-
 }
 
 func (r *ElasticRepository) InsertMeow(ctx context.Context, meow schema.Meow) error {
@@ -37,7 +35,7 @@ func (r *ElasticRepository) InsertMeow(ctx context.Context, meow schema.Meow) er
 		BodyJson(meow).
 		Refresh("wait_for").
 		Do(ctx)
-	return error
+	return err
 }
 
 func (r *ElasticRepository) SearchMeows(ctx context.Context, query string, skip uint64, take uint64) ([]schema.Meow, error) {
