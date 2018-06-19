@@ -37,4 +37,8 @@ export default {
     margin-bottom: 0;
   }
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> b87cb8c0b17c81adb089e1ffcf4d41ff0486edda
