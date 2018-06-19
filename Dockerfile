@@ -2,6 +2,7 @@ FROM golang:1.10.2-alpine3.7 AS build
 RUN apk --no-cache add gcc g++ make ca-certificates
 WORKDIR /go/src/github.com/juniarta/fsn
 
+RUN go get -u github.com/golang/dep/...
 COPY Gopkg.lock Gopkg.toml ./
 RUN dep ensure -vendor-only
 
