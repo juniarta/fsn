@@ -4,15 +4,17 @@ WORKDIR /go/src/github.com/juniarta/fsn
 
 COPY Gopkg.lock Gopkg.toml ./
 
-COPY vendor vendor
-COPY util util
-COPY event event
-COPY db db
-COPY search search
-COPY schema schema
-COPY meow-service meow-service
-COPY query-service query-service
-COPY pusher-service pusher-service
+COPY vendor vendor 
+COPY util util 
+COPY event event 
+COPY db db 
+COPY search search 
+COPY schema schema 
+COPY retry retry
+COPY meow-service meow-service 
+COPY query-service query-service 
+COPY pusher-service pusher-service 
+
 
 RUN go install ./...
 
