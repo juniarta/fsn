@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-vendor/
-=======
 
 # Created by https://www.gitignore.io/api/go,git,macos,visualstudiocode
 
@@ -59,4 +56,3 @@ Temporary Items
 
 
 # End of https://www.gitignore.io/api/go,git,macos,visualstudiocode
->>>>>>> b87cb8c0b17c81adb089e1ffcf4d41ff0486edda

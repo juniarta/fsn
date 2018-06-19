@@ -40,8 +40,4 @@ export default {
     Meow,
   },
 };
-<<<<<<< HEAD
 </script>
-=======
-</script>
->>>>>>> b87cb8c0b17c81adb089e1ffcf4d41ff0486edda

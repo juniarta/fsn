@@ -11,19 +11,10 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import Timeline from '@/components/Timeline';
 import Search from '@/components/Search';
 
 export default {
-=======
-import Timeline from './components/Timeline.vue';
-import Search from './components/Search.vue';
-
-
-export default {
-  name: 'app',
->>>>>>> b87cb8c0b17c81adb089e1ffcf4d41ff0486edda
   components: {
     Timeline,
     Search,

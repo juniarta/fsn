@@ -52,11 +52,7 @@ func main() {
 	retry.ForeverSleep(2*time.Second, func(_ int) error {
 		es, err := event.NewNats(fmt.Sprintf("nats://%s", cfg.NatsAddress))
 		if err != nil {
-<<<<<<< HEAD
 			log.Println(err)
-=======
-			log.Println("meowservice", err)
->>>>>>> b87cb8c0b17c81adb089e1ffcf4d41ff0486edda
 			return err
 		}
 		event.SetEventStore(es)

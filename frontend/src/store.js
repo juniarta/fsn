@@ -4,11 +4,7 @@ import axios from 'axios';
 import VueNativeSock from 'vue-native-websocket';
 
 const BACKEND_URL = 'http://localhost:8080';
-<<<<<<< HEAD
 const PUSHER_URL = 'ws://localhost:8080/pusher';
-=======
-const PUSHER_URL = 'ws:/localhost:8080/pusher';
->>>>>>> b87cb8c0b17c81adb089e1ffcf4d41ff0486edda
 
 const SET_MEOWS = 'SET_MEOWS';
 const CREATE_MEOW = 'CREATE_MEOW';
