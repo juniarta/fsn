@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"encoding/gob"
 
+	"github.com/juniarta/fsn/schema"
 	"github.com/nats-io/go-nats"
-	"github.com/tinrab/meower/schema"
 )
 
 type NatsEventStore struct {

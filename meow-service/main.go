@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
+	"github.com/juniarta/fsn/db"
+	"github.com/juniarta/fsn/event"
 	"github.com/kelseyhightower/envconfig"
-	"github.com/tinrab/meower/db"
-	"github.com/tinrab/meower/event"
 	"github.com/tinrab/retry"
 )
 

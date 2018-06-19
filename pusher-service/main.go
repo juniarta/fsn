@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/juniarta/fsn/event"
 	"github.com/kelseyhightower/envconfig"
-	"github.com/tinrab/meower/event"
 	"github.com/tinrab/retry"
 )
 

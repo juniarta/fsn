@@ -1,6 +1,6 @@
 FROM golang:1.10.2-alpine3.7 AS build
 RUN apk --no-cache add gcc g++ make ca-certificates
-WORKDIR /go/src/github.com/tinrab/meower
+WORKDIR /go/src/github.com/juniarta/fsn
 
 COPY Gopkg.lock Gopkg.toml ./
 COPY vendor vendor

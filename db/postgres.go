@@ -4,8 +4,8 @@ import (
 	"context"
 	"database/sql"
 
+	"github.com/juniarta/fsn/schema"
 	_ "github.com/lib/pq"
-	"github.com/tinrab/meower/schema"
 )
 
 type PostgresRepository struct {

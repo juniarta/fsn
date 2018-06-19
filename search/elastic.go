@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"log"
 
+	"github.com/juniarta/fsn/schema"
 	"github.com/olivere/elastic"
-	"github.com/tinrab/meower/schema"
 )
 
 type ElasticRepository struct {
