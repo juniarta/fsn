@@ -83,15 +83,9 @@
   revision = "112f929a3020abfcd06b77c963ec919130796a35"
   version = "1.0.1"
 
-[[projects]]
-  name = "github.com/tinrab/retry"
-  packages = ["."]
-  revision = "e979fd9b1d7980d567dd50fc993d06f1fb17eac3"
-  version = "v1.0.0"
-
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "66f177ea2c56066cfbaf7586b19ccc047e8b348545bde971803701495e2eb104"
+  inputs-digest = "5fd5856570c40bb7295f05d83c3752448829b53ad041a559274ab3772760446f"
   solver-name = "gps-cdcl"
   solver-version = 1
