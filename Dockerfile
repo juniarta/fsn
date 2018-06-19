@@ -3,6 +3,8 @@ RUN apk --no-cache add gcc g++ make ca-certificates
 WORKDIR /go/src/github.com/juniarta/fsn
 
 COPY Gopkg.lock Gopkg.toml ./
+RUN dep ensure -vendor-only
+
 COPY vendor vendor
 COPY util util
 COPY event event
