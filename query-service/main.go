@@ -9,9 +9,9 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/juniarta/fsn/db"
 	"github.com/juniarta/fsn/event"
+	"github.com/juniarta/fsn/retry"
 	"github.com/juniarta/fsn/search"
 	"github.com/kelseyhightower/envconfig"
-	"github.com/tinrab/retry"
 )
 
 type Config struct {

@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/juniarta/fsn/event"
+	"github.com/juniarta/fsn/retry"
 	"github.com/kelseyhightower/envconfig"
-	"github.com/tinrab/retry"
 )
 
 type Config struct {

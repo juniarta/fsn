@@ -32,10 +32,6 @@ const store = new Vuex.Store({
           this.commit(CREATE_MEOW, { id: message.id, body: message.body });
       }
     },
-<<<<<<< HEAD
-=======
-
->>>>>>> b87cb8c0b17c81adb089e1ffcf4d41ff0486edda
     [SET_MEOWS](state, meows) {
       state.meows = meows;
     },
@@ -56,11 +52,7 @@ const store = new Vuex.Store({
         .then(({ data }) => {
           commit(SET_MEOWS, data);
         })
-<<<<<<< HEAD
         .catch((err) => console.error(err));
-=======
-        .catch(err => console.error(err));
->>>>>>> b87cb8c0b17c81adb089e1ffcf4d41ff0486edda
     },
     async createMeow({ commit }, meow) {
       const { data } = await axios.post(`${BACKEND_URL}/meows`, null, {
@@ -70,11 +62,7 @@ const store = new Vuex.Store({
       });
     },
     async searchMeows({ commit }, query) {
-<<<<<<< HEAD
       if (query.length == 0) {
-=======
-      if (query.length === 0) {
->>>>>>> b87cb8c0b17c81adb089e1ffcf4d41ff0486edda
         commit(SEARCH_SUCCESS, []);
         return;
       }
